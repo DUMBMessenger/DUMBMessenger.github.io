@@ -4,10 +4,10 @@
   "hero.description": "Decentralized messenger without logs and spying, where you choose how to communicate. Anyone can host their own server.",
   "footer.text": "© 2025 DUMB Team. 💜 made by debianrose & akaruineko",
   "features": [
-    {"title":"Privacy","text":"No trackers or logs — everything is under your control."},
-    {"title":"Host Freedom","text":"Run your own server or connect to another — your choice."},
-    {"title":"DUMB PC Client","text":"PC client in development — lightweight, fast, native, and secure."},
-    {"title":"DUMB Android","text":"Android client — download and test it now!"}
+    {"title":"Privacy","text":"No trackers or logs — everything is under your control.","icon":"privacy.svg"},
+    {"title":"Host Freedom","text":"Run your own server or connect to another — your choice.","icon":"server.svg"},
+    {"title":"DUMB PC Client","text":"PC client in development — lightweight, fast, native, and secure.","icon":"pc.svg"},
+    {"title":"DUMB Android","text":"Android client — download and test it now!","icon":"android.svg"}
   ],
   "team":[
     {"name":"debianrose","role":"Founder"},
