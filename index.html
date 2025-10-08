@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <canvas id="bg"></canvas>
     <header>
-      <h1 data-translate-key="header.title"></h1>
+      <h1 style="display:flex; align-items:center; gap:12px;">
+        <img src="imgs/logo.jpg" alt="DUMB Logo" style="height:50px; width:auto; border-radius: 50%;">
+        <span data-translate-key="header.title"></span>
+      </h1>
       <div style="display:flex; gap:10px; align-items:center;">
         <a href="https://github.com/DUMBMessenger" class="btn-github">GitHub</a>
         <select id="languageSelector"></select>
       </div>
     </header>
+
     <section class="hero">
       <h2 data-translate-key="hero.title"></h2>
       <p data-translate-key="hero.description"></p>
@@ -24,7 +29,7 @@
       <p data-translate-key="footer.text"></p>
     </footer>
     <script src="js/translations.js"></script>
-    <script src="main.js"></script>
-    <script src="shader.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/shader.js"></script>
   </body>
 </html>
