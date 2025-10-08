@@ -134,3 +134,26 @@ footer {
   }
 }
 
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  background: rgba(183, 131, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(183, 131, 255, 0.3);
+}
+
+.feature-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.feature:hover .feature-icon {
+  background: rgba(183, 131, 255, 0.2);
+  border-color: rgba(183, 131, 255, 0.6);
+  transform: scale(1.1);
+  transition: 0.3s;
+}

@@ -16,7 +16,13 @@ function renderFeatures(featuresData){
   featuresData.forEach(f => {
     const div = document.createElement('div');
     div.className = 'feature';
-    div.innerHTML = `<h3>${f.title}</h3><p>${f.text}</p>`;
+    div.innerHTML = `
+      <div class="feature-icon">
+        <img src="iconz/${f.icon}" alt="${f.title}">
+      </div>
+      <h3>${f.title}</h3>
+      <p>${f.text}</p>
+    `;
     container.appendChild(div);
   });
 }
