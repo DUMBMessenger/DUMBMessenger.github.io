@@ -1,0 +1,19 @@
+{
+  "header.title": "👁️ DUMB Messenger",
+  "hero.title": "DUMB — Debianrose Ultimate Messenger Base",
+  "hero.description": "Decentralized messenger without logs and spying, where you choose how to communicate. Anyone can host their own server.",
+  "footer.text": "© 2025 DUMB Team. 💜 made by debianrose & akaruineko",
+  "features": [
+    {"title":"💬 Privacy","text":"No trackers or logs — everything is under your control."},
+    {"title":"⚙️ Host Freedom","text":"Run your own server or connect to another — your choice."},
+    {"title":"🦀 DUMB PC Client","text":"PC client in development — lightweight, fast, native, and secure."},
+    {"title":"📱 DUMB Android","text":"Android client — download and test it now!"}
+  ],
+  "team":[
+    {"name":"@dpkgdeb","role":"Founder"},
+    {"name":"@ImIvMih","role":"Designer"},
+    {"name":"@bodicbilder","role":"PR Manager"},
+    {"name":"@Baursak4","role":"Junior SMM"},
+    {"name":"@AkaruiNeko","role":"Coder"}
+  ]
+}

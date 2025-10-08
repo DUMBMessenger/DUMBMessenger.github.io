@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  color: #e3e3e8;
+  background: #0f0f12;
+  overflow-x: hidden;
+}
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(40, 0, 60, 0.5);
+  box-shadow: 0 0 20px rgba(140, 0, 255, 0.3);
+  backdrop-filter: blur(5px);
+}
+header h1 {
+  font-size: 1.6em;
+  color: #b783ff;
+  text-shadow: 0 0 12px #b783ff;
+}
+.btn-github {
+  text-decoration: none;
+  color: #fff;
+  background: #8b00ff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn-github:hover {
+  background: #a945ff;
+  box-shadow: 0 0 20px #a945ff;
+  transform: scale(1.05);
+}
+.hero {
+  text-align: center;
+  padding: 140px 20px 100px 20px;
+}
+.hero h2 {
+  font-size: 3em;
+  color: #b783ff;
+  text-shadow: 0 0 30px #b783ff;
+  line-height: 1.2;
+}
+.hero p {
+  color: #ccc;
+  max-width: 650px;
+  margin: 25px auto 0;
+  font-size: 1.15em;
+  line-height: 1.5;
+}
+.features,
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 50px;
+}
+.feature,
+.member {
+  background: rgba(28, 27, 34, 0.85);
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(140, 0, 255, 0.15);
+  transition: 0.4s;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: featureFade 1.5s forwards;
+}
+.feature:hover,
+.member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #b783ff;
+}
+footer {
+  text-align: center;
+  padding: 35px;
+  color: #999;
+  background: rgba(0, 0, 0, 0.65);
+  font-size: 0.9em;
+}
+#languageSelector {
+  background: rgba(40, 0, 60, 0.8);
+  color: #e3e3e8;
+  border: 1px solid #b783ff;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-weight: bold;
+  font-size: 0.85em;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(183, 131, 255, 0.6);
+  transition: 0.3s;
+}
+
+#languageSelector:hover {
+  background: rgba(60, 0, 90, 0.9);
+  box-shadow: 0 0 25px rgba(183, 131, 255, 0.9);
+  transform: scale(1.05);
+}
+
+#languageSelector option {
+  background: #0f0f12;
+  color: #e3e3e8;
+}
+@keyframes featureFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 15px 25px;
+  }
+  .hero h2 {
+    font-size: 2.2em;
+  }
+  .hero p {
+    font-size: 1em;
+  }
+}
+
