@@ -161,18 +161,14 @@ footer {
 .btn-telegram {
   text-decoration: none;
   color: #fff;
-  background: #0088cc;
-  padding: 12px 20px;
+  background: #8b00ff;
+  padding: 12px 24px;
   border-radius: 12px;
   font-weight: bold;
   transition: 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
-
 .btn-telegram:hover {
-  background: #0099e6;
-  box-shadow: 0 0 20px #0099e6;
+  background: #a945ff;
+  box-shadow: 0 0 20px #a945ff;
   transform: scale(1.05);
 }
