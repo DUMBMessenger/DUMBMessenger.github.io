@@ -3,7 +3,7 @@ const langSelect = document.getElementById('languageSelector');
 availableLanguages.forEach(l => {
   const opt = document.createElement('option');
   opt.value = l;
-  opt.textContent = l.toUpperCase();
+  opt.textContent = languageDisplayNames[l] || l.toUpperCase();
   langSelect.appendChild(opt);
 });
 
@@ -17,11 +17,11 @@ function renderFeatures(featuresData){
     const div = document.createElement('div');
     div.className = 'feature';
     div.innerHTML = `
-      <div class="feature-icon">
-        <img src="iconz/${f.icon}" alt="${f.title}">
-      </div>
-      <h3>${f.title}</h3>
-      <p>${f.text}</p>
+    <div class="feature-icon">
+    <img src="imgs/icons/${f.icon}" alt="${f.title}">
+    </div>
+    <h3>${f.title}</h3>
+    <p>${f.text}</p>
     `;
     container.appendChild(div);
   });
