@@ -10,12 +10,7 @@ availableLanguages.forEach(l => {
 let currentLang = localStorage.getItem('DUMB_lang') || availableLanguages[0];
 langSelect.value = currentLang;
 
-function t(key) {
-  const data = translations[currentLang];
-  return data[key] || key;
-}
-
-function renderFeatures() {
+function renderFeatures(featuresData){
   const container = document.getElementById('features');
   container.innerHTML = '';
   featuresData.forEach(f => {
@@ -23,41 +18,36 @@ function renderFeatures() {
     div.className = 'feature';
     div.innerHTML = `
     <div class="feature-icon">
-    <img src="imgs/icons/${f.icon}" alt="${t(f.titleKey)}">
+    <img src="imgs/icons/${f.icon}" alt="${f.title}">
     </div>
-    <h3>${t(f.titleKey)}</h3>
-    <p>${t(f.textKey)}</p>
+    <h3>${f.title}</h3>
+    <p>${f.text}</p>
     `;
     container.appendChild(div);
   });
 }
 
-function renderTeam() {
+function renderTeam(teamData){
   const container = document.getElementById('team');
   container.innerHTML = '';
   teamData.forEach(m => {
     const div = document.createElement('div');
     div.className = 'member';
-    div.innerHTML = `
-    <h3>${m.name}</h3>
-    <p>${t(m.roleKey)}</p>
-    `;
+    div.innerHTML = `<h3>${m.name}</h3><p>${m.role}</p>`;
     container.appendChild(div);
   });
 }
 
-function setLanguage(lang) {
+function setLanguage(lang){
   currentLang = lang;
   localStorage.setItem('DUMB_lang', lang);
   const data = translations[lang];
-
   document.querySelectorAll('[data-translate-key]').forEach(el => {
     const key = el.getAttribute('data-translate-key');
-    el.innerHTML = data[key] || key;
+    el.innerHTML = data[key] || '';
   });
-
-  renderFeatures();
-  renderTeam();
+  renderFeatures(data.features || []);
+  renderTeam(data.team || []);
 }
 
 langSelect.addEventListener('change', e => setLanguage(e.target.value));
