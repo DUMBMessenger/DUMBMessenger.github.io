@@ -39,7 +39,10 @@ function renderTeam() {
     const div = document.createElement('div');
     div.className = 'member';
     div.innerHTML = `
-    <h3>${m.name}</h3>
+    <h3>
+    <img src="imgs/flags/${m.country}.svg" alt="${m.country}" style="width:24px; height:24px; margin-right:6px; vertical-align:middle;">
+    ${m.name}
+    </h3>
     <p>${t(m.roleKey)}</p>
     `;
     container.appendChild(div);

@@ -1,9 +1,9 @@
 const teamData = [
-    { name: "debianrose", roleKey: "team.role.founder" },
-{ name: "ImIvMih", roleKey: "team.role.designer" },
-{ name: "bodicbilder", roleKey: "team.role.pr" },
-{ name: "Baursak4", roleKey: "team.role.smm" },
-{ name: "AkaruiNeko", roleKey: "team.role.coder" }
+    { name: "debianrose", roleKey: "team.role.founder", country: "ru" },
+{ name: "ImIvMih", roleKey: "team.role.designer", country: "ru" },
+{ name: "bodicbilder", roleKey: "team.role.pr", country: "be" },
+{ name: "Baursak4", roleKey: "team.role.smm", country: "ru" },
+{ name: "AkaruiNeko", roleKey: "team.role.coder", country: "ru" }
 ];
 
 const featuresData = [
