@@ -66,3 +66,36 @@ function setLanguage(lang) {
 langSelect.addEventListener('change', e => setLanguage(e.target.value));
 
 setLanguage(currentLang);
+function renderTeam() {
+  const container = document.getElementById('team');
+  container.innerHTML = '';
+  teamData.forEach(m => {
+    const div = document.createElement('div');
+    div.className = 'member';
+    
+    let socialsHTML = '';
+    if (m.socials && m.socials.length > 0) {
+      socialsHTML = `
+        <div class="member-socials">
+          ${m.socials.map(social => `
+            <a href="${social.url}" target="_blank" class="social-link" title="${social.type}">
+              <img src="icons/${social.type}.svg" alt="${social.type}" class="social-icon">
+            </a>
+          `).join('')}
+        </div>
+      `;
+    }
+    
+    div.innerHTML = `
+      <h3>
+        <img src="imgs/flags/${m.country}.svg" alt="${m.country}" style="width:24px; height:24px; margin-right:6px; vertical-align:middle;">
+        ${m.name}
+      </h3>
+      <p>${t(m.roleKey)}</p>
+      ${socialsHTML}
+    `;
+    container.appendChild(div);
+  });
+}
+
+Эт заменишь в js/main.js
