@@ -28,7 +28,6 @@ const teamData = [
         country: "ru",
         socials: [
             { type: "telegram", url: "https://t.me/ImIvMih" },
-            { type: "github", url: "https://github.com/ImIvMih" }
         ]
     },
     { 
@@ -46,7 +45,6 @@ const teamData = [
         country: "ru",
         socials: [
             { type: "telegram", url: "https://t.me/Baursak4" },
-            { type: "github", url: "https://github.com/Baursak4" }
         ]
     },
     { 
