@@ -45,7 +45,7 @@ function renderTeam() {
         <div class="member-socials">
           ${m.socials.map(social => `
             <a href="${social.url}" target="_blank" class="social-link" title="${social.type}">
-              <img src="icons/socials/${social.type}.svg" alt="${social.type}" class="social-icon">
+              <img src="imgs/icons/socials/${social.type}.svg" alt="${social.type}" class="social-icon">
             </a>
           `).join('')}
         </div>
