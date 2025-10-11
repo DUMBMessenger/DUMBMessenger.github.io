@@ -38,40 +38,6 @@ function renderTeam() {
   teamData.forEach(m => {
     const div = document.createElement('div');
     div.className = 'member';
-    div.innerHTML = `
-    <h3>
-    <img src="imgs/flags/${m.country}.svg" alt="${m.country}" style="width:24px; height:24px; margin-right:6px; vertical-align:middle;">
-    ${m.name}
-    </h3>
-    <p>${t(m.roleKey)}</p>
-    `;
-    container.appendChild(div);
-  });
-}
-
-function setLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem('DUMB_lang', lang);
-  const data = translations[lang];
-
-  document.querySelectorAll('[data-translate-key]').forEach(el => {
-    const key = el.getAttribute('data-translate-key');
-    el.innerHTML = data[key] || key;
-  });
-
-  renderFeatures();
-  renderTeam();
-}
-
-langSelect.addEventListener('change', e => setLanguage(e.target.value));
-
-setLanguage(currentLang);
-function renderTeam() {
-  const container = document.getElementById('team');
-  container.innerHTML = '';
-  teamData.forEach(m => {
-    const div = document.createElement('div');
-    div.className = 'member';
     
     let socialsHTML = '';
     if (m.socials && m.socials.length > 0) {
@@ -98,4 +64,20 @@ function renderTeam() {
   });
 }
 
-Эт заменишь в js/main.js
+function setLanguage(lang) {
+  currentLang = lang;
+  localStorage.setItem('DUMB_lang', lang);
+  const data = translations[lang];
+
+  document.querySelectorAll('[data-translate-key]').forEach(el => {
+    const key = el.getAttribute('data-translate-key');
+    el.innerHTML = data[key] || key;
+  });
+
+  renderFeatures();
+  renderTeam();
+}
+
+langSelect.addEventListener('change', e => setLanguage(e.target.value));
+
+setLanguage(currentLang);
