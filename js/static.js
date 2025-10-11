@@ -55,7 +55,7 @@ const teamData = [
         country: "ru",
         socials: [
             { type: "telegram", url: "https://t.me/AkaruiNeko" },
-            { type: "github", url: "https://github.com/AkaruiNeko" }
+            { type: "github", url: "https://github.com/BrightCat14" }
         ]
     }
 ];
