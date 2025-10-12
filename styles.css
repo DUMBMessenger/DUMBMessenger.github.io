@@ -265,3 +265,55 @@ footer {
     max-width: 260px;
   }
 }
+.member-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(183, 131, 255, 0.2);
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(183, 131, 255, 0.1);
+    border: 1px solid rgba(183, 131, 255, 0.3);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: rgba(183, 131, 255, 0.2);
+    border-color: #b783ff;
+    box-shadow: 0 0 15px rgba(183, 131, 255, 0.6);
+    transform: scale(1.1);
+}
+
+.social-icon {
+    width: 18px;
+    height: 18px;
+    filter: brightness(0.8);
+    transition: 0.3s;
+}
+
+.social-link:hover .social-icon {
+    filter: brightness(1);
+}
+
+/* Обновляем стиль member для учета соцсетей */
+.member {
+    background: rgba(28, 27, 34, 0.85);
+    padding: 30px 25px 25px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(140, 0, 255, 0.15);
+    transition: 0.4s;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: featureFade 1.5s forwards;
+}
