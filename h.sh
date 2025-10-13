@@ -47,7 +47,7 @@ info "Настраиваем Flutter..."
 flutter config --android-sdk "$PREFIX/opt/android-sdk"
 
 info "Принимаем лицензии Android SDK..."
-yes | "$PREFIX/opt/android-sdk/tools/bin/sdkmanager" --licenses
+yes | "sdkmanager" --licenses
 
 info "Очищаем временные файлы..."
 cd "$HOME"
