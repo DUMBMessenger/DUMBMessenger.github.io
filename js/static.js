@@ -14,10 +14,7 @@ const teamData = [
         country: "ru",
         socials: [
             { type: "telegram", url: "https://t.me/ImIvMih" },
-<<<<<<< HEAD
-=======
             { type: "github", url: "https://github.com/ImIvMih" }
->>>>>>> 02696e6 (откат)
         ]
     },
     { 
@@ -35,10 +32,7 @@ const teamData = [
         country: "ru",
         socials: [
             { type: "telegram", url: "https://t.me/Baursak4" },
-<<<<<<< HEAD
-=======
             { type: "github", url: "https://github.com/Baursak4" }
->>>>>>> 02696e6 (откат)
         ]
     },
     { 
@@ -47,11 +41,7 @@ const teamData = [
         country: "ru",
         socials: [
             { type: "telegram", url: "https://t.me/AkaruiNeko" },
-<<<<<<< HEAD
             { type: "github", url: "https://github.com/BrightCat14" }
-=======
-            { type: "github", url: "https://github.com/AkaruiNeko" }
->>>>>>> 02696e6 (откат)
         ]
     }
 ];
