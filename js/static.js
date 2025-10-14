@@ -13,8 +13,7 @@ const teamData = [
         roleKey: "team.role.designer", 
         country: "ru",
         socials: [
-            { type: "telegram", url: "https://t.me/ImIvMih" },
-            { type: "github", url: "https://github.com/ImIvMih" }
+            { type: "telegram", url: "https://t.me/ImIvMih" }
         ]
     },
     { 
@@ -31,8 +30,7 @@ const teamData = [
         roleKey: "team.role.smm", 
         country: "ru",
         socials: [
-            { type: "telegram", url: "https://t.me/Baursak4" },
-            { type: "github", url: "https://github.com/Baursak4" }
+            { type: "telegram", url: "https://t.me/Baursak4" }
         ]
     },
     { 
