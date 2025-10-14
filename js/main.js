@@ -7,7 +7,21 @@ availableLanguages.forEach(l => {
   langSelect.appendChild(opt);
 });
 
-let currentLang = localStorage.getItem('DUMB_lang') || availableLanguages[0];
+function detectUserLang() {
+  const saved = localStorage.getItem('DUMB_lang');
+  if (saved && availableLanguages.includes(saved)) return saved;
+
+  const navLang = navigator.language.toLowerCase();
+  const shortLang = navLang.split('-')[0];
+
+  if (availableLanguages.includes(navLang)) return navLang;
+  const matched = availableLanguages.find(l => l.split('-')[0] === shortLang);
+  if (matched) return matched;
+
+  return availableLanguages[0];
+}
+
+let currentLang = detectUserLang();
 langSelect.value = currentLang;
 
 function t(key) {
@@ -38,27 +52,27 @@ function renderTeam() {
   teamData.forEach(m => {
     const div = document.createElement('div');
     div.className = 'member';
-    
+
     let socialsHTML = '';
     if (m.socials && m.socials.length > 0) {
       socialsHTML = `
-        <div class="member-socials">
-          ${m.socials.map(social => `
-            <a href="${social.url}" target="_blank" class="social-link" title="${social.type}">
-              <img src="imgs/icons/socials/${social.type}.svg" alt="${social.type}" class="social-icon">
-            </a>
-          `).join('')}
+      <div class="member-socials">
+      ${m.socials.map(social => `
+        <a href="${social.url}" target="_blank" class="social-link" title="${social.type}">
+        <img src="imgs/icons/socials/${social.type}.svg" alt="${social.type}" class="social-icon">
+        </a>
+        `).join('')}
         </div>
-      `;
+        `;
     }
-    
+
     div.innerHTML = `
-      <h3>
-        <img src="imgs/flags/${m.country}.svg" alt="${m.country}" style="width:24px; height:24px; margin-right:6px; vertical-align:middle;">
-        ${m.name}
-      </h3>
-      <p>${t(m.roleKey)}</p>
-      ${socialsHTML}
+    <h3>
+    <img src="imgs/flags/${m.country}.svg" alt="${m.country}" style="width:24px; height:24px; margin-right:6px; vertical-align:middle;">
+    ${m.name}
+    </h3>
+    <p>${t(m.roleKey)}</p>
+    ${socialsHTML}
     `;
     container.appendChild(div);
   });
