@@ -1,4 +1,4 @@
-const elements = document.querySelectorAll('.feature, .member .header-dumb .header-dumb-1 .header-dumb-2'); // TODO: fix .header-dumb-1, .header-dumb-2
+const elements = document.querySelectorAll('.feature, .member'); // TODO: add .header-dumb-1, .header-dumb-2
 const positions = new Map();
 
 elements.forEach(el => positions.set(el, { y: 0 }));
