@@ -38,3 +38,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Deploy to dumb-msg xyz
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          SERVER_URL: https://dumb-msg.xyz/api
+        run: |
+          zip -r site.zip .
+          curl -X POST "$SERVER_URL/deploy" \
+               -F "key=$DEPLOY_KEY" \
+               -F "file=@site.zip"
