@@ -1,5 +1,7 @@
 const positions = new Map();
 
+function lerp(a, b, t) { return a + (b - a) * t; }
+
 function updateLiquidScroll() {
     const windowHeight = window.innerHeight;
     const currentElements = document.querySelectorAll('.feature, .member');  // TODO: add .header-dumb-1, .header-dumb-2
