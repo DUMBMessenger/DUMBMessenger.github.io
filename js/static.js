@@ -21,6 +21,7 @@ const teamData = [
         roleKey: "team.role.pr", 
         country: "be",
         socials: [
+            { type: "youtube", url: "https://www.youtube.com/@skreval_ultimate" },
             { type: "telegram", url: "https://t.me/bodicbilder" },
             { type: "github", url: "https://github.com/bodicbilder" }
         ]
