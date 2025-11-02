@@ -39,7 +39,8 @@ const teamData = [
         roleKey: "team.role.coder", 
         country: "ru",
         socials: [
-            { type: "youtube", url: "https://www.youtube.com/@AkaruiNeko" },
+	    { type: "website", url: "https://akaruineko.space" },
+	    { type: "youtube", url: "https://www.youtube.com/@AkaruiNeko" },
             { type: "telegram", url: "https://t.me/AkaruiNeko" },
             { type: "github", url: "https://github.com/BrightCat14" }
         ]
