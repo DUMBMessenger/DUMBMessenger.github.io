@@ -77,7 +77,7 @@ async function sendTelemetry() {
     const data = await collectWebTelemetry();
 
     try {
-        await fetch('https://analytics.dumb-msg.xyz:7634/collect', {
+        await fetch('https://analytics.dumb-msg.xyz/api/collect', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
