@@ -18,5 +18,14 @@
   "team.role.pr": "PR Manager",
   "team.role.smm": "Junior SMM",
   "team.role.coder": "Coder",
-  "footer.text": "© 2025 DUMB Team. 💜 made by debianrose & akaruineko"
+  "footer.text": "© 2025 DUMB Team. 💜 made by debianrose & akaruineko",
+
+  "dumkey.hero.title": "DUMKey",
+  "dumkey.hero.description": "An app for TOTP authentication with built-in data encryption!",
+  "dumkey.features.title": "Benefits",
+  "dumkey.features.security.title": "Security",
+  "dumkey.features.security.text": "Unique ANSE2 encryption ensures maximum protection of your data from theft.",
+  "dumkey.features.decentralization.title": "Offline",
+  "dumkey.features.decentralization.text": "No servers — all data is stored only on your device!",
+  "dumkey.footer.text": "DUMB project, made by akaruineko 💜"
 }
